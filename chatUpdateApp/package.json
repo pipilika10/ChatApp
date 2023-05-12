@@ -1,10 +1,10 @@
 {
   "name": "chatUpdateApp",
   "version": "1.0.0",
-  "description": "",
+  "description": "MEAN stack chat App",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon app.js",
+    "devStart": "nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -18,6 +18,7 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "jshint": "^2.13.6",
     "mongoose": "^7.1.0",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.22",

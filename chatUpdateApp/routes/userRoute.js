@@ -32,10 +32,13 @@ const userController=require('../controllers/userController');
 
 const auth=require('../middlewares/auth');
 
-app.get("/", (req, res) => {
-    res.send("I will be shown on the Browser");
-    console.log("I will be shown on the Terminal");
-});
+user_route.get('/', userController.loadIndex);
+
+user_route.get("/", (req, res) => {
+        res.send("I will be shown on the Browser");
+        console.log("I will be shown on the Terminal");
+    });
+
 user_route.get('/register', userController.registerLoad);
 user_route.post('/register', upload.single('img'), userController.register);
 

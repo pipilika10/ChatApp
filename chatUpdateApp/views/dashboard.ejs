@@ -1,6 +1,6 @@
-
-< %- include('layouts/header.ejs')% > 
-<h1>  HII, < %= user.username% ></h1>
+<script>
+<%- include('layouts/header.ejs')%> </script>
+<h1>  HII, <script><%= user.username%></script></h1>
 <div class="row">
 <div class="col-md-3">
     <ul class="list-group">
@@ -9,7 +9,7 @@
             for(let i=0;i<users.length;i++){
                 %>
                 <li class="list-group-item cursor-pointer user-list"><%= user.username%>
-                <img src="<%='http/127.0.0.1:3000'+users[i]['image']%>" alt="" width="100px" height="100px">
+                <img src="<script><%='http/127.0.0.1:3000'+users[i]['image']%></script>" alt="" width="100px" height="100px">
                 <%= users[i]['name']%>
                 </li>
                 <%
@@ -38,6 +38,14 @@
 </div>
 
 <script>
+
+var sender_id='<%=user._id%>''%>;
+var socket=io('/user-namespace',{
+    auth:{
+        token:'<%= user._id%>'
+    }
+});
+
     $(document).ready(function(){
         $('user-list').click(function(){
             $('start-head').hide();
@@ -46,4 +54,6 @@
     })
 </script>
 <a href="/logout">Logout</a>
-< %- include('layouts/footer.ejs')% >
+<script>
+<%- include('layouts/footer.ejs')%>
+</script>
