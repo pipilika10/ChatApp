@@ -1,0 +1,14 @@
+{
+    "cSpell.words": [
+        "chatloguser",
+        "middlewares",
+        "mongosh",
+        "useremail"
+    ],
+
+    "htmlhint.options": {
+        "spec-char-escape": false,
+        "doctype-first": false
+    }
+    
+}

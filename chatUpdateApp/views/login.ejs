@@ -1,0 +1,17 @@
+
+<h1> LOGIN</h1>
+
+<% if(typeof message !== 'undefimed'){
+    %>
+    <h4 style="color:red;"><%= message %></h4>
+    <%
+        } 
+        %>
+   
+<form action="../views/login" method="post">
+
+    <input type="email" name="useremail" placeholder="email" required><br/><br/>
+    <input type="password" name="password" placeholder="password" required><br/><br/>
+    <input type="submit" value="Login"  required><br/><br/>
+
+</form>
